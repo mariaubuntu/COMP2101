@@ -21,8 +21,9 @@ DAY=$(date +"%A")
 ###############
 # Main        #
 ###############
-#cat <<EOF
+s=` cat <<EOF
 
-cowsay "Welcome to planet $hostname, "$title $USER!" current time is $CURRENT on $DAY"
+"Welcome to planet $hostname, "$title $USER!" current time is $CURRENT on $DAY"
 
-#EOF
+EOF`
+echo "$(cowsay $s)"
